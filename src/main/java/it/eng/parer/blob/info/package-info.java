@@ -16,8 +16,8 @@
  */
 
 /**
- * Questo package contiene i Data Trasfer Object utilizzati come payload delle code.
- * La struttura del payload {@link it.eng.parer.blob.info.PayLoad} è la seguente:
+ * Questo package contiene i Data Trasfer Object utilizzati come payload delle code. La struttura del payload
+ * {@link it.eng.parer.blob.info.PayLoad} è la seguente:
  * <ul>
  * <li>{@link it.eng.parer.blob.info.BlobInfo}
  * <ul>
@@ -26,7 +26,8 @@
  * <li>{@link it.eng.parer.blob.info.Urn}</li>
  * <li>{@link it.eng.parer.blob.info.MigrazioneInfo} - struttura compilata per la coda <em>CODA_MIGRATI</em></li>
  * <li>{@link it.eng.parer.blob.info.VerificaInfo} - struttura compilata per la coda <em>CODA_VERIFICATI</em></li>
- * <li>{@link it.eng.parer.blob.info.ErroreInfo} - struttura compilata in caso di errore in <em>CODA_MIGRATI</em> oppure in <em>CODA_VERIFICATI</em></li> 
+ * <li>{@link it.eng.parer.blob.info.ErroreInfo} - struttura compilata in caso di errore in <em>CODA_MIGRATI</em> oppure
+ * in <em>CODA_VERIFICATI</em></li>
  * </ul>
  * </li>
  * </ul>

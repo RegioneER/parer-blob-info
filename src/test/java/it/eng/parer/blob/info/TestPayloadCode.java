@@ -39,8 +39,7 @@ import org.slf4j.LoggerFactory;
 /**
  * Test sulla composizione dei Payload.
  *
- * Questi test sono stati utilizzati soprattutto per generare i payload di
- * esempio per la documentazione.
+ * Questi test sono stati utilizzati soprattutto per generare i payload di esempio per la documentazione.
  *
  * @author Snidero_L
  */
@@ -190,7 +189,8 @@ public class TestPayloadCode {
         payload.setMigrazioneInfo(migrazioneInfo);
         payload.setVerificaInfo(verificaInfo);
         print("4/7 H3 - Esempio di blob verificato:");
-        print("Questo è il payload di input per il processo di SACER in caso inserimento avvenuto con successo.\nIl payload è stato recuperato da SACER dalla coda CODA_VERIFICATI.", payload);
+        print("Questo è il payload di input per il processo di SACER in caso inserimento avvenuto con successo.\nIl payload è stato recuperato da SACER dalla coda CODA_VERIFICATI.",
+                payload);
 
         PayLoad payloadParsed = jsonMapper.readValue(payload.toString(), PayLoad.class);
         assertThat(payloadParsed, is(payload));
@@ -205,7 +205,8 @@ public class TestPayloadCode {
         payload.setVerificaInfo(verificaInfo);
 
         print("5/7 H3 - Esempio di blob verificato (SHA-256):");
-        print("L'esempio è analogo al precedente con la differenza che l'hash del file prodotto da SACER è di tipo SHA-256.", payload);
+        print("L'esempio è analogo al precedente con la differenza che l'hash del file prodotto da SACER è di tipo SHA-256.",
+                payload);
 
         PayLoad payloadParsed = jsonMapper.readValue(payload.toString(), PayLoad.class);
         assertThat(payloadParsed, is(payload));
@@ -217,7 +218,8 @@ public class TestPayloadCode {
         payload.setErroreInfo(erroreInserimento);
 
         print("3/7  H3 - Esempio di errore durante l'inserimento:");
-        print("Questo è il payload di input per il processo di SACER in caso di errore di inserimento.\nIl payload viene aggiunto alla CODA_ERRATI dal processo MIGRATORE.", payload);
+        print("Questo è il payload di input per il processo di SACER in caso di errore di inserimento.\nIl payload viene aggiunto alla CODA_ERRATI dal processo MIGRATORE.",
+                payload);
 
         PayLoad payloadParsed = jsonMapper.readValue(payload.toString(), PayLoad.class);
         assertThat(payloadParsed, is(payload));
@@ -230,7 +232,8 @@ public class TestPayloadCode {
         payload.setErroreInfo(erroreVerifica);
 
         print("7/7 H3 - Esempio di errore durante la verifica:");
-        print("Questo è il payload di input per il processo di SACER in caso errore durante la verifica.\nIl payload è stato recuperato da SACER dalla coda CODA_ERRATI.", payload);
+        print("Questo è il payload di input per il processo di SACER in caso errore durante la verifica.\nIl payload è stato recuperato da SACER dalla coda CODA_ERRATI.",
+                payload);
 
         PayLoad payloadParsed = jsonMapper.readValue(payload.toString(), PayLoad.class);
         assertThat(payloadParsed, is(payload));
@@ -242,11 +245,13 @@ public class TestPayloadCode {
         final PayLoad payload = basePayLoad;
         basePayLoad.getBlobInfo().setTipoHashDaCalcolare("SHA-512");
         payload.setMigrazioneInfo(migrazioneInfo);
-        verificaInfo.setHash("41a9f3210136f44164751e85f0419775a53a53dd1f2530a332809dc643f48eae23b4714843f44566c1c8c028d80a369e0a51c2dcdf66ffd713a801a9d3621026");
+        verificaInfo.setHash(
+                "41a9f3210136f44164751e85f0419775a53a53dd1f2530a332809dc643f48eae23b4714843f44566c1c8c028d80a369e0a51c2dcdf66ffd713a801a9d3621026");
         payload.setVerificaInfo(verificaInfo);
 
         print("6/7 Esempio di blob verificato (Input SHA-1 output SHA-512):");
-        print("Caso analogo al precedente con richiesta di calcolo hash SHA-512 da parte del servizio VERIFICATORE.", payload);
+        print("Caso analogo al precedente con richiesta di calcolo hash SHA-512 da parte del servizio VERIFICATORE.",
+                payload);
 
         PayLoad payloadParsed = jsonMapper.readValue(payload.toString(), PayLoad.class);
         assertThat(payloadParsed, is(payload));
@@ -261,7 +266,9 @@ public class TestPayloadCode {
 
         Set<ConstraintViolation<PayLoad>> validate = validator.validate(payLoad);
         for (ConstraintViolation<PayLoad> constraintViolation : validate) {
-            System.err.println("\t" + constraintViolation.getMessage() + " valore errato: " + constraintViolation.getInvalidValue() + " per la proprietà " + constraintViolation.getPropertyPath());
+            System.err.println(
+                    "\t" + constraintViolation.getMessage() + " valore errato: " + constraintViolation.getInvalidValue()
+                            + " per la proprietà " + constraintViolation.getPropertyPath());
         }
         assertThat(validate.size(), is(11));
     }
@@ -275,7 +282,9 @@ public class TestPayloadCode {
 
         Set<ConstraintViolation<PayLoad>> validate = validator.validate(payLoad);
         for (ConstraintViolation<PayLoad> constraintViolation : validate) {
-            System.err.println("\t" + constraintViolation.getMessage() + " valore errato: " + constraintViolation.getInvalidValue() + " per la proprietà " + constraintViolation.getPropertyPath());
+            System.err.println(
+                    "\t" + constraintViolation.getMessage() + " valore errato: " + constraintViolation.getInvalidValue()
+                            + " per la proprietà " + constraintViolation.getPropertyPath());
         }
         assertThat(validate.size(), is(4));
     }
@@ -290,9 +299,11 @@ public class TestPayloadCode {
 
         Set<ConstraintViolation<PayLoad>> validate = validator.validate(payLoad);
         for (ConstraintViolation<PayLoad> constraintViolation : validate) {
-            System.err.println("\t" + constraintViolation.getMessage() + " valore errato: " + constraintViolation.getInvalidValue() + " per la proprietà " + constraintViolation.getPropertyPath());
+            System.err.println(
+                    "\t" + constraintViolation.getMessage() + " valore errato: " + constraintViolation.getInvalidValue()
+                            + " per la proprietà " + constraintViolation.getPropertyPath());
         }
-        assertThat(validate.size(), is(2)); //was 3 
+        assertThat(validate.size(), is(2)); // was 3
     }
 
     @Test
@@ -304,7 +315,9 @@ public class TestPayloadCode {
 
         Set<ConstraintViolation<PayLoad>> validate = validator.validate(basePayLoad);
         for (ConstraintViolation<PayLoad> constraintViolation : validate) {
-            log.error("\t" + constraintViolation.getMessage() + " valore errato: " + constraintViolation.getInvalidValue() + " per la proprietà " + constraintViolation.getPropertyPath());
+            log.error(
+                    "\t" + constraintViolation.getMessage() + " valore errato: " + constraintViolation.getInvalidValue()
+                            + " per la proprietà " + constraintViolation.getPropertyPath());
         }
         assertThat(validate.size(), is(1));
     }

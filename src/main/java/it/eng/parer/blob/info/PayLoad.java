@@ -29,12 +29,9 @@ import org.apache.commons.lang3.builder.ToStringStyle;
  * Struttura generale del payload delle code. Contiene le informazioni di:
  * <ul>
  * <li>{@link BlobInfo}: informazioni prodotte da SACER</li>
- * <li>{@link MigrazioneInfo}: informazioni prodotte dal micro-servizio di
- * migrazione</li>
- * <li>{@link VerificaInfo}: informazioni prodotte dal micro-servizio di
- * verifica</li>
- * <li>{@link ErroreInfo}: informazioni prodotte dai micro-servizii di
- * migrazione o di verifica in caso di errore</li>
+ * <li>{@link MigrazioneInfo}: informazioni prodotte dal micro-servizio di migrazione</li>
+ * <li>{@link VerificaInfo}: informazioni prodotte dal micro-servizio di verifica</li>
+ * <li>{@link ErroreInfo}: informazioni prodotte dai micro-servizii di migrazione o di verifica in caso di errore</li>
  * </ul>
  *
  * @author Snidero_L

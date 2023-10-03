@@ -27,9 +27,8 @@ import org.apache.commons.lang3.builder.ToStringStyle;
 /**
  * URN del documento.
  *
- * Il documento/componente versato viene identificato, all'interno della sua
- * struttura di appartenenza, tramite un URN. Nel corso degli anni le specifiche
- * relative al formato sono cambiate. Per questo motivo qui ne indichiamo tre
+ * Il documento/componente versato viene identificato, all'interno della sua struttura di appartenenza, tramite un URN.
+ * Nel corso degli anni le specifiche relative al formato sono cambiate. Per questo motivo qui ne indichiamo tre
  * versioni differenti.
  *
  * @author Snidero_L

@@ -29,8 +29,7 @@ import org.apache.commons.lang3.builder.ToStringStyle;
 /**
  * Parte del componente {@link BlobInfo}.
  * <p>
- * Tramite questo oggetto è possibile identificare univocamente sul database di
- * SACER il documento da migrare.
+ * Tramite questo oggetto è possibile identificare univocamente sul database di SACER il documento da migrare.
  * </p>
  *
  * @author Snidero_L
@@ -40,9 +39,8 @@ public class ChiaveDiRecupero implements Serializable {
     private static final long serialVersionUID = 1537321751974875880L;
 
     /**
-     * RegExp per identificare i caratteri ammessi per identificare le
-     * tabelle/colonne su ORACLE. Accetta solamente nomi composti da un minimo
-     * di 1 ad un massimo di 30 caratteri e composti da
+     * RegExp per identificare i caratteri ammessi per identificare le tabelle/colonne su ORACLE. Accetta solamente nomi
+     * composti da un minimo di 1 ad un massimo di 30 caratteri e composti da
      * <ul>
      * <li>lettere maiuscole;</li>
      * <li>carattere "_";</li>
@@ -50,7 +48,10 @@ public class ChiaveDiRecupero implements Serializable {
      * <li>carattere ".".</li>
      * </ul>
      * La regexp è la seguente:
-     * <pre>^([A-Z]|[_\\-\\.]){1,30}$</pre>
+     * 
+     * <pre>
+     * ^([A-Z]|[_\\-\\.]){1,30}$
+     * </pre>
      */
     private static final String CARATTERI_PERMESSI = "^([A-Z]|[a-z]|[_\\-\\.]){1,30}$";
 

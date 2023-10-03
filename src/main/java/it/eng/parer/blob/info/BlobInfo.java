@@ -30,8 +30,7 @@ import org.apache.commons.lang3.builder.ToStringStyle;
 /**
  * Componente principale del Payload delle code.
  *
- * Tale parte del payload è compilata da Sacer e fa parte del payload inserito
- * nelle code:
+ * Tale parte del payload è compilata da Sacer e fa parte del payload inserito nelle code:
  * <ul>
  * <li>CODA_DA_MIGRARE</li>
  * <li>CODA_MIGRATI</li>
@@ -58,7 +57,7 @@ public class BlobInfo implements Serializable {
     private String hash;
 
     @NotNull(message = "Hash encoding non può essere vuoto (BLOB_INFO.HASH_ENCODING)")
-    private String hashEncoding; //99% dei casi sarà hexBinary 
+    private String hashEncoding; // 99% dei casi sarà hexBinary
 
     @NotNull(message = "Il tenant deve essere valorizzato (BLOB_INFO.TENANT)")
     private String tenant;

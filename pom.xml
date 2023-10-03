@@ -7,7 +7,33 @@
     <packaging>jar</packaging>
     <name>Micro WS - Payload code</name>
     <description>Payload utilizzato per alimentare le code JMS del broker su openshift.</description>
-    <url>https://gitlab.ente.regione.emr.it/parer/blob-info</url>
+
+    <parent>
+        <groupId>it.eng.parer</groupId>
+        <artifactId>parer-pom</artifactId>
+        <version>4.2.0</version>
+    </parent>
+    
+    <scm>
+        <developerConnection>scm:git:https://github.com/RegioneER/parer-blob-info.git</developerConnection>
+        <tag>HEAD</tag>
+    </scm>
+
+    <distributionManagement>
+      <repository>
+        <id>github</id>
+        <url>https://maven.pkg.github.com/RegioneER/parer-blob-info</url>
+      </repository>      
+    </distributionManagement>
+
+
+    <repositories>
+        <repository>
+            <id>github</id>
+            <url>https://maven.pkg.github.com/RegioneER/parer-framework-parerpom</url>            
+        </repository>          
+	</repositories>
+
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.source>1.8</maven.compiler.source>
@@ -81,24 +107,7 @@
             <scope>test</scope>
         </dependency>
     </dependencies>
-    <scm>
-        <developerConnection>scm:git:git@gitlab.ente.regione.emr.it:parer/blob-info.git</developerConnection>
-        <tag>HEAD</tag>
-    </scm>
-    <distributionManagement>
-        <repository>
-            <id>rel</id>
-            <url>https://nexus.ente.regione.emr.it/repository/parer-release/</url>
-        </repository>
-        <snapshotRepository>
-            <id>snap</id>
-            <url>https://nexus.ente.regione.emr.it/repository/parer-snapshot/</url>
-        </snapshotRepository>
-        <site>
-            <id>site</id>
-            <url>dav:https://nexus.ente.regione.emr.it/repository/parer-site/blob-info/${project.version}</url>
-        </site>
-    </distributionManagement>
+   
     <reporting>
         <plugins>
             <plugin>

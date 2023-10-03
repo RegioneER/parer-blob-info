@@ -32,7 +32,7 @@ public class VerificaInfo implements Serializable {
 
     private static final long serialVersionUID = 96783405622699118L;
     private long timeStamp;
-    private String hashEncoding; //99% dei casi sarà hexBinary 
+    private String hashEncoding; // 99% dei casi sarà hexBinary
     private String hash;
 
     public VerificaInfo() {
