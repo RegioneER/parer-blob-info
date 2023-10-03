@@ -3,7 +3,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>it.eng.parer</groupId>
     <artifactId>blob-info</artifactId>
-    <version>1.0.1-SNAPSHOT</version>
+    <version>1.0.0</version>
     <packaging>jar</packaging>
     <name>Micro WS - Payload code</name>
     <description>Payload utilizzato per alimentare le code JMS del broker su openshift.</description>
@@ -16,7 +16,7 @@
     
     <scm>
         <developerConnection>scm:git:https://github.com/RegioneER/parer-blob-info.git</developerConnection>
-        <tag>HEAD</tag>
+        <tag>blob-info-1.0.0</tag>
     </scm>
 
     <distributionManagement>
