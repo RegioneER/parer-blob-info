@@ -19,21 +19,17 @@ Come già specificato nel paragrafo precedente [Descrizione](# Descrizione) si t
 </dependency>
 ```
 
-# Utilizzo
-
-Il modulo contiene al suo interno oggetti i quali mappone le informazioni necessarie alla gestione del processo di migrazione di BLOB presenti su base dati verso l'object storage.
-
 # Supporto
 
-Progetto a cura di [Engineering Ingegneria Informatica S.p.A.](https://www.eng.it/).
+Mantainer del progetto è [Engineering Ingegneria Informatica S.p.A.](https://www.eng.it/).
 
 # Contributi
 
 Se interessati a crontribuire alla crescita del progetto potete scrivere all'indirizzo email <a href="mailto:areasviluppoparer@regione.emilia-romagna.it">areasviluppoparer@regione.emilia-romagna.it</a>.
 
-# Autori
+# Credits
 
-Proprietà intellettuale del progetto di [Regione Emilia-Romagna](https://www.regione.emilia-romagna.it/) e [Polo Archivisitico](https://poloarchivistico.regione.emilia-romagna.it/).
+Progetto di proprietà di [Regione Emilia-Romagna](https://www.regione.emilia-romagna.it/) sviluppato a cura di [Engineering Ingegneria Informatica S.p.A.](https://www.eng.it/).
 
 # Licenza
 
